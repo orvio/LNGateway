@@ -8,4 +8,4 @@ It can use a i2c OLED display to show the messages passed through it.
 
 It works in JMRI with the LocoBuffer interface driver.
 
-The TX_PIN must be set to 5 if the circuit is built as documented in the KiCad files. It is compatible with the LocoLinx example scetch from the LocoNet library as long as the TX_PIN is set correctly.
+The TX_PIN must be set to 5 if the circuit is built as documented in the KiCad files. It is compatible with the LocoLinx example sketch from the LocoNet library as long as the TX_PIN is set correctly.
