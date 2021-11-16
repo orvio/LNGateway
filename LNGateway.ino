@@ -1,5 +1,5 @@
 /*
-    This file is part of the LocoBridge project.
+    This file is part of the LNGateway project.
     
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -120,7 +120,7 @@ void setup() {
   digitalWrite(RX_LED_PIN, HIGH);
   pinMode(TX_LED_PIN, OUTPUT);
   digitalWrite(TX_LED_PIN, HIGH);
-  displayStrings[displayLineIndex] = "LocoBridge";
+  displayStrings[displayLineIndex] = "LNGateway";
   if (!serialOpen) {
     incrementDisplayLine();
     displayStrings[displayLineIndex] = "Serial closed";
