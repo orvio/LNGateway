@@ -1,37 +1,31 @@
-## Welcome to GitHub Pages
+# LNGateway
+LNGateway is an opto isolated DIY interface between Loconet and a serial interface based on an Arduino micro.
 
-You can use the [editor on GitHub](https://github.com/orvio/LNGateway/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+A PDF of the schematic is available [here](https://orvio.github.io/LNGateway/LNGateway.pdf).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The main purpose is to provide a gateway for throttle messages between wifi trottles connected to JMRI and a DCC command station.
+It understands enough Loconet to block certain message types in order to cut down on traffic on either side of the bridge.
 
-### Markdown
+It can use a i2c OLED display to show the messages passed through it.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+It works in JMRI with the LocoBuffer interface driver.
 
-```markdown
-Syntax highlighted code block
+The TX_PIN must be set to 5 if the circuit is built as documented in the KiCad files. It is compatible with the LocoLinx example sketch from the LocoNet library as long as the TX_PIN is set correctly.
 
-# Header 1
-## Header 2
-### Header 3
+The board design matches the mounting hole spacing of a Raspberry Pi.
 
-- Bulleted
-- List
+Full board:
 
-1. Numbered
-2. List
+![Full board](https://orvio.github.io/LNGateway/Images/V1_board_full_800w.JPG)
 
-**Bold** and _Italic_ and `Code` text
+Board without display and Arduino:
 
-[Link](url) and ![Image](src)
-```
+![Board without display and Arduino](https://orvio.github.io/LNGateway/Images/V1_board1_800w.JPG)
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+Detail view:
 
-### Jekyll Themes
+![Detail view](https://orvio.github.io/LNGateway/Images/V1_board2_800w.JPG)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/orvio/LNGateway/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Modification to have the V2 circuit on the V1 board:
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+![Modification to have the V2 circuit on the V1 board](https://orvio.github.io/LNGateway/Images/V1_board3_800w.JPG)
