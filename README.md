@@ -13,13 +13,17 @@ The TX_PIN must be set to 5 if the circuit is built as documented in the KiCad f
 The board design matches the mounting hole spacing of a Raspberry Pi.
 
 Full board:
-![Full board](https://orvio.github.com/LNGateway/Images/V1_board_full_800w.JPG)
+
+![Full board](https://orvio.github.io/LNGateway/Images/V1_board_full_800w.JPG)
 
 Board without display and Arduino:
-![Board without display and Arduino](https://orvio.github.com/LNGateway/Images/V1_board1_800w.JPG)
+
+![Board without display and Arduino](https://orvio.github.io/LNGateway/Images/V1_board1_800w.JPG)
 
 Detail view:
-![Detail view](https://orvio.github.com/LNGateway/Images/V1_board2_800w.JPG)
+
+![Detail view](https://orvio.github.io/LNGateway/Images/V1_board2_800w.JPG)
 
 Modification to have the V2 circuit on the V1 board:
-![Modification to have the V2 circuit on the V1 board](https://orvio.github.com/LNGateway/Images/V1_board3_800w.JPG)
+
+![Modification to have the V2 circuit on the V1 board](https://orvio.github.io/LNGateway/Images/V1_board3_800w.JPG)
