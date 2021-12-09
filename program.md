@@ -7,10 +7,10 @@ All Arduino boards can be programmed with the Arduino IDE. It is open source, fr
 The download page for all versions is located at [https://www.arduino.cc/en/software](https://www.arduino.cc/en/software).
 The software is also available in the Windows app store and is included in many Linux distributions.
 
-The Arduino project has a lot of [documentation](https://www.arduino.cc/en/Guide) for beginners including [installation insturctions](https://www.arduino.cc/en/Guide/Windows) for Windows.
+The Arduino project has a lot of [documentation](https://www.arduino.cc/en/Guide) for beginners including [installation instructions](https://www.arduino.cc/en/Guide/Windows) for Windows.
 
 ## Installing the required libraries
-Once the Arduino IDE has been installed on you system you need to install a couple of required libraries. This can be done with the library manager inclued in the Arduino IDE.
+Once the Arduino IDE has been installed on your system you need to install a couple of required libraries. This can be done with the library manager included in the Arduino IDE.
 
 You can access the library manager through the menu under _Tools->Manage Libraries..._ or by pressing __Ctrl-Shift-I__.
 Opening the library manager can take a moment on slow systems.
@@ -20,14 +20,14 @@ The first required library is the Adafruit SSD1306 library. You can enter "ssd13
 
 ![Adafruit SSD1306 library selected](https://orvio.github.io/LNGateway/Images/SSD1306-1.png)
 
-Click on the Adafruit SSD1306 result to select it and the choose the latest version and click __Install__.
+Click on the Adafruit SSD1306 result to select it and then choose the latest version and click __Install__.
 
 ![Adafruit SSD1306 library dependencies](https://orvio.github.io/LNGateway/Images/SSD1306-2.png)
 
 The Adafruit SSD1306 library depends on a couple of other libraries. The library manager will ask you if you want to install the dependencies as well. Click __Install all__ and wait until the installion is complete.
 
 ### Installing the Loconet library
-The second required library is the Loconet library. Type "locoent" into the search field to locate it.
+The second required library is the Loconet library. Type "loconet" into the search field to locate it.
 
 ![Loconet library selected](https://orvio.github.io/LNGateway/Images/loconet.png)
 
@@ -37,7 +37,7 @@ Wait for the installation to complete and close the library manager.
 ## Setting up the IDE
 Arduino produces many different board types. We need to tell it for which specific board it needs to compile the source code and the port where it should talk to the board.
 
-### Selecting the borad type
+### Selecting the board type
 The board type can be selected through the menu under _Tools->Board:->Arduino Micro_.
 
 ![Arduino Micro selected](https://orvio.github.io/LNGateway/Images/arduinomicro.png)
@@ -47,7 +47,7 @@ The serial port can be selected trough the menu _Tools->Port_:
 
 ![Port selected](https://orvio.github.io/LNGateway/Images/portselection.png)
 
-The name of the port depends on your operating system. On Windows serial ports are usually named like "COM1". Most of the menu entry will also say "Arduino Micro" next to the port name.
+The name of the port depends on your operating system. On Windows serial ports are usually named like "COM1". Most of the time the menu entry will also say "Arduino Micro" next to the port name.
 You need to have the Arduino board connected to your computer in order to select the serial port.
 
 ## Uploading the project
