@@ -3,6 +3,8 @@ LNGateway is an opto isolated DIY interface between Loconet and a serial interfa
 
 A PDF of the schematic is available [here](https://orvio.github.io/LNGateway/LNGateway.pdf).
 
+Programming instructions for the Arduino board are available [here](program.md).
+
 The main purpose is to provide a gateway for throttle messages between wifi trottles connected to JMRI and a DCC command station.
 It understands enough Loconet to block certain message types in order to cut down on traffic on either side of the bridge.
 
