@@ -4,6 +4,8 @@ LNGateway is an opto isolated DIY interface between Loconet and a serial interfa
 The main purpose is to provide a gateway for throttle messages between wifi trottles connected to JMRI and a DCC command station.
 It understands enough Loconet to block certain message types in order to cut down on traffic on either side of the bridge.
 
+Additional documentation and instructions are available under [https://orvio.github.io/LNGateway](https://orvio.github.io/LNGateway)
+
 It can use a i2c OLED display to show the messages passed through it.
 
 It works in JMRI with the LocoBuffer interface driver.
