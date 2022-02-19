@@ -21,6 +21,12 @@
 #include <Adafruit_SSD1306.h>
 #include <LocoNet.h>
 
+//set to 1 to hide blocked messages
+#define HIDE_BLOCKED_MESSAGES 1
+
+//block switch requests from the serial interface
+#define BLOCK_OPC_SW_REQ 1
+
 #define SCREEN_WIDTH 128 // OLED display width, in pixels
 #define SCREEN_HEIGHT 64 // OLED display height, in pixels
 
@@ -35,8 +41,7 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 static LnBuf lnTXBuffer;
 static lnMsg *lnPacket;
 
-//set to 1 to hide blocked messages
-#define HIDE_BLOCKED_MESSAGES 1
+
 
 //text size 1 gives 8 display lines; size 2 reduces that to 4
 #define DISPLAY_LINES 8
@@ -202,6 +207,7 @@ void processSerialData(void) {
         serialByteIndex >= messageLength) { //message complete
       switch (serialBytes[0]) {
         //blocked messages
+        #if BLOCK_OPC_SW_REQ
         case OPC_SW_REQ: //Switch Request
           if ( testCheckSum(serialBytes, serialByteIndex) ) {
             updateDisplayStrings(SerialBlock, serialBytes, serialByteIndex);
@@ -211,6 +217,7 @@ void processSerialData(void) {
           }
 
           break;
+        #endif
         default: //pass on everything we did not want to block
           copyMessageToTXBuffer(serialBytes, serialByteIndex);
       } //switch opcode
@@ -246,7 +253,9 @@ void processLocoData(void) {
     bool passMessage = true;
 
     if (testCheckSum(lnPacket->data, Length)) {
-      switch (lnPacket->data[0]) {
+      //Blocking throttle messages from the LN side seems to confuse JMRI
+      //So let's not do that anymore
+      /*switch (lnPacket->data[0]) {
         //blocked messages from the LN side
         case OPC_RQ_SL_DATA: //Slot data request
         case OPC_LOCO_ADR: //Loco address request
@@ -257,7 +266,7 @@ void processLocoData(void) {
           break;
         default:
           break;
-      }
+      }*/
 
       if (passMessage) {
         // Send the received packet out byte by byte to the PC
