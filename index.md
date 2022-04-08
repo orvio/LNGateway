@@ -3,9 +3,11 @@ LNGateway is an opto isolated DIY interface between Loconet and a serial interfa
 It transfers messages from one connection to the other and can be used instead of a LocoBuffer in JMRI.
 
 A PDF of the schematic is available [here](https://orvio.github.io/LNGateway/LNGateway.pdf).
-All required parts are THT (through hole technology), so the circuit is easy to solder and can be set up on a bread board for testing.
+All required parts are THT (through hole technology), so the circuit is easy to solder and can be set up on a bread board for testing. The part list with required amounts and estimated prices is available [here](bom.md).
 
 Programming instructions for the Arduino board are available [here](program.md).
+
+A tutorial video describing the setup of the Raspberry PI is available on Youtube: [https://youtu.be/PdjqzoUwuFU](https://youtu.be/PdjqzoUwuFU).
 
 The main purpose is to provide a gateway for throttle messages between wifi trottles connected to JMRI and a DCC command station.
 It understands enough Loconet to block certain message types in order to cut down on traffic on either side of the bridge.
